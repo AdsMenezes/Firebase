@@ -1,0 +1,169 @@
+_type: export
+__export_format: 4
+__export_date: 2022-01-09T19:35:44.037Z
+__export_source: insomnia.desktop.app:v2021.7.2
+resources:
+  - _id: req_ffb41935703949bf94efd399b7bfdd15
+    parentId: wrk_9f2fd3414e134feb831f479780a31e7c
+    modified: 1641741631560
+    created: 1641711536424
+    url: "{{ _.baseURL }}/movies"
+    name: Find all movies
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641741556197
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_9f2fd3414e134feb831f479780a31e7c
+    parentId: null
+    modified: 1641711525486
+    created: 1641711525486
+    name: Firebase
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_f53eda442a994457a8800b817e0eaa6a
+    parentId: wrk_9f2fd3414e134feb831f479780a31e7c
+    modified: 1641756890081
+    created: 1641742204579
+    url: "{{ _.baseURL }}/movies/{{ _.movieID }}"
+    name: Find movie by id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641741331486.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_01da220548c345508b3ea63caed7d7c4
+    parentId: wrk_9f2fd3414e134feb831f479780a31e7c
+    modified: 1641756861279
+    created: 1641741106776
+    url: "{{ _.baseURL }}/movies"
+    name: Create movie
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Mãe X Androides",
+        	"genet": "Suspense/Ficção científica",
+        	"year": 2021,
+        	"duration": 153
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_179b9969814f4c3f9c8de472c0de604e
+    authentication: {}
+    metaSortKey: -1641741106776
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_da4b3ccd7b2440ffbe1e900de64d9e4c
+    parentId: wrk_9f2fd3414e134feb831f479780a31e7c
+    modified: 1641755441256
+    created: 1641741556147
+    url: "{{ _.baseURL }}/movies/{{ _.movieID }}"
+    name: Delete movie by id
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641741106726
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dc7b4fa9708845a3a98a2d91dd6f527a
+    parentId: wrk_9f2fd3414e134feb831f479780a31e7c
+    modified: 1641756902372
+    created: 1641742899662
+    url: "{{ _.baseURL }}/movies/{{ _.movieID }}"
+    name: Update movie by id
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Super 8",
+        	"year": 2011
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5e7c2aabdbac4d7e8dba17a89881c161
+    authentication: {}
+    metaSortKey: -1641741106676
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_908b77f670001c47c15df2a9966580e8386ded2b
+    parentId: wrk_9f2fd3414e134feb831f479780a31e7c
+    modified: 1641755459971
+    created: 1641711525495
+    name: Base Environment
+    data:
+      baseURL: http://localhost:3333
+      movieID: vQIs7dcJ3rYcXrsHoUjJ
+    dataPropertyOrder:
+      "&":
+        - baseURL
+        - movieID
+    color: null
+    isPrivate: false
+    metaSortKey: 1641711525495
+    _type: environment
+  - _id: jar_908b77f670001c47c15df2a9966580e8386ded2b
+    parentId: wrk_9f2fd3414e134feb831f479780a31e7c
+    modified: 1641711525498
+    created: 1641711525498
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_6c991e487c7d497491bf1ac40d365230
+    parentId: wrk_9f2fd3414e134feb831f479780a31e7c
+    modified: 1641711525488
+    created: 1641711525488
+    fileName: Firebase
+    contents: ""
+    contentType: yaml
+    _type: api_spec
